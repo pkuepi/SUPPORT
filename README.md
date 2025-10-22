@@ -5,7 +5,16 @@ This repository includes parameters and codes of synthetic data generation and t
 ## Overview
 
 The SUPPORT dataset is a large-scale resource comprising 777,358,492 synthetic individuals aged 35–84 across seven
-geographic regions of China for 2020. Each individual has a detailed profile of sociodemographic attributes and major cardiovascular disease (CVD) risk factors, including blood pressure, cholesterol, body mass index, and diabetes history. The population was constructed using iterative proportional fitting and multivariate normal distribution sampling, integrating data from China's Seventh National Population Census, the Global Burden of Disease (GBD) study, and numerous health surveys. Technical validation against census statistics and independent cohorts, including the China Kadoorie Biobank, confirmed the high fidelity of the dataset to real-world population data. SUPPORT is open-source and can be extended with additional attributes. This resource enables robust, individual-level modeling of CVD and is publicly available at `https://doi.org/10.5281/zenodo.17406896`.
+geographic regions of China for 2020. Each individual has a detailed profile of sociodemographic attributes and major cardiovascular disease (CVD) risk factors, including blood pressure, cholesterol, body mass index, and diabetes history. The population was constructed using iterative proportional fitting and multivariate normal distribution sampling, integrating data from China's Seventh National Population Census, the Global Burden of Disease (GBD) study, and numerous health surveys. Technical validation against census statistics and independent cohorts, including the China Kadoorie Biobank, confirmed the high fidelity of the dataset to real-world population data. SUPPORT is open-source and can be extended with additional attributes. This resource enables robust, individual-level modeling of CVD and is publicly available at `https://doi.org/10.5281/zenodo.17406896
+        
+Provinces/autonomous region/municipality in seven regions of Mainland China: 
+- North China: Beijing, Tianjin, Hebei, Shanxi, Inner Mongolia 
+- Northeast: Liaoning, Jilin, Heilongjiang 
+- Central China: Henan, Hubei, Hunan 
+- East China: Shanghai, Jiangsu, Zhejiang, Anhui, Fujian, Jiangxi, Shandong  
+- Northwest: Shaanxi, Gansu, Qinghai, Ningxia, Xinjiang  
+- South China: Guangdong, Guangxi, Hainan  
+- Southwest: Chongqing, Sichuan, Guizhou, Yunnan, Tibet
 
 ## Quick Start
 
