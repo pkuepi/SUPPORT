@@ -4,7 +4,7 @@ This repository includes parameters and codes of synthetic data generation and t
 
 ## Overview
 
-The SUPPORT dataset is a large-scale resource comprising 777,358,492 synthetic individuals aged 35–84 across seven geographic regions of China for 2020. Each individual has a detailed profile of sociodemographic attributes and major cardiovascular disease (CVD) risk factors, including blood pressure, cholesterol, body mass index, and diabetes history. The population was constructed using iterative proportional fitting and multivariate normal distribution sampling, integrating data from China's Seventh National Population Census, the Global Burden of Disease (GBD) study, and numerous health surveys. Technical validation against census statistics and independent cohorts, including the China Kadoorie Biobank, confirmed the high fidelity of the dataset to real-world population data. SUPPORT is open-source and can be extended with additional attributes. This resource enables individual-level modeling of CVD and is publicly available at `https://doi.org/10.5281/zenodo.17406896`
+The SUPPORT dataset is a large-scale resource comprising 777,358,492 synthetic individuals aged 35–84 across seven geographic regions of China for 2020. Each individual has a detailed profile of sociodemographic attributes and major cardiovascular disease (CVD) risk factors, including blood pressure, cholesterol, body mass index, and diabetes history. The population was constructed using iterative proportional fitting and multivariate normal distribution sampling, integrating data from China's Seventh National Population Census, the Global Burden of Disease (GBD) study, and numerous health surveys. Technical validation against census statistics and independent cohorts, including the China Kadoorie Biobank, confirmed the high fidelity of the dataset to real-world population data. SUPPORT is open-source and can be extended with additional attributes. This resource enables individual-level modeling of CVD and is publicly available at `https://doi.org/10.5281/zenodo.17406895`
 
 Lists of provinces/autonomous region/municipality in seven regions of Mainland China*: 
 - Central China: Henan, Hubei, Hunan
@@ -241,18 +241,18 @@ SUPPORT/
     │      5_Figures_CVDriskfactors.R
     │
     ├─Figures
-    │      Age_by_Region.tif
-    │      BMI_with_CKB.tif
-    │      Education_by_Region.tif
-    │      Ethnicity_by_Region.tif
-    │      History_of_Diabetes_with_CKB.tif
-    │      Prevalence_of_Current_Smoking_with_CKB.tif
-    │      Prevalence_of_Diabetes_with_CKB.tif
-    │      Rural_by_Region.tif
-    │      SBP_with_CKB.tif
-    │      Settlement_type_by_Region.tif
-    │      Ten-year_CHD_risk_with_CKB.tif
-    │      Ten-year_Stroke_risk_with_CKB.tif
+    │      Age_by_Region.png
+    │      BMI_with_CKB.png
+    │      Education_by_Region.png
+    │      Ethnicity_by_Region.png
+    │      History_of_Diabetes_with_CKB.png
+    │      Prevalence_of_Current_Smoking_with_CKB.png
+    │      Prevalence_of_Diabetes_with_CKB.png
+    │      Rural_by_Region.png
+    │      SBP_with_CKB.png
+    │      Settlement_type_by_Region.png
+    │      Ten-year_CHD_risk_with_CKB.png
+    │      Ten-year_Stroke_risk_with_CKB.png
     │
     ├─Parameters
     │      Age_byRegion_Settlement_Sex.xlsx
@@ -284,7 +284,202 @@ SUPPORT/
             South_CVDriskFactor_ComparedWithMeilan_category.xlsx
 ```
 
+## Repository Structure (Version 1.1)
+
+```
+SUPPORT/
+│
+├─Generation
+│  ├─Codes
+│  │  ├─Central
+│  │  │      1_Demonstration_SBP_Diabetes_Generation_Male_Central.R
+│  │  │      2_Demonstration_SBP_Diabetes_Generation_Female_Central.R
+│  │  │      3_Append_AllSex_Central.R
+│  │  │
+│  │  ├─East
+│  │  │      1_Demonstration_SBP_Diabetes_Generation_Male_East.R
+│  │  │      2_Demonstration_SBP_Diabetes_Generation_Female_East.R
+│  │  │      3_Append_AllSex_East.R
+│  │  │
+│  │  ├─North
+│  │  │      1_Demonstration_SBP_Diabetes_Generation_Male_North.R
+│  │  │      2_Demonstration_SBP_Diabetes_Generation_Female_North.R
+│  │  │      3_Append_AllSex_North.R
+│  │  │
+│  │  ├─Northeast
+│  │  │      1_Demonstration_SBP_Diabetes_Generation_Male_Northeast.R
+│  │  │      2_Demonstration_SBP_Diabetes_Generation_Female_Northeast.R
+│  │  │      3_Append_AllSex_Northeast.R
+│  │  │
+│  │  ├─Northwest
+│  │  │      1_Demonstration_SBP_Diabetes_Generation_Male_Northwest.R
+│  │  │      2_Demonstration_SBP_Diabetes_Generation_Female_Northwest.R
+│  │  │      3_Append_AllSex_Northwest.R
+│  │  │
+│  │  ├─South
+│  │  │      1_Demonstration_SBP_Diabetes_Generation_Male_South.R
+│  │  │      2_Demonstration_SBP_Diabetes_Generation_Female_South.R
+│  │  │      3_Append_AllSex_South.R
+│  │  │
+│  │  └─Southwest
+│  │          1_Demonstration_SBP_Diabetes_Generation_Male_Southwest.R
+│  │          2_Demonstration_SBP_Diabetes_Generation_Female_Southwest.R
+│  │          3_Append_AllSex_Southwest.R
+│  │
+│  └─Parameters
+│      │  cov_matrix_female_SBP_Diabetes.xlsx
+│      │  cov_matrix_male_SBP_Diabetes.xlsx
+│      │
+│      ├─Central
+│      │      Central_mean_Female.xlsx
+│      │      Central_mean_Male.xlsx
+│      │      Central_Population_num_Female.xlsx
+│      │      Central_Population_num_Male.xlsx
+│      │
+│      ├─East
+│      │      East_mean_Female.xlsx
+│      │      East_mean_Male.xlsx
+│      │      East_Population_num_Female.xlsx
+│      │      East_Population_num_Male.xlsx
+│      │
+│      ├─North
+│      │      North_mean_Female.xlsx
+│      │      North_mean_Male.xlsx
+│      │      North_Population_num_Female.xlsx
+│      │      North_Population_num_Male.xlsx
+│      │
+│      ├─Northeast
+│      │      Northeast_mean_Female.xlsx
+│      │      Northeast_mean_Male.xlsx
+│      │      Northeast_Population_num_Female.xlsx
+│      │      Northeast_Population_num_Male.xlsx
+│      │
+│      ├─Northwest
+│      │      Northwest_mean_Female.xlsx
+│      │      Northwest_mean_Male.xlsx
+│      │      Northwest_Population_num_Female.xlsx
+│      │      Northwest_Population_num_Male.xlsx
+│      │
+│      ├─South
+│      │      South_mean_Female.xlsx
+│      │      South_mean_Male.xlsx
+│      │      South_Population_num_Female.xlsx
+│      │      South_Population_num_Male.xlsx
+│      │
+│      └─Southwest
+│              Southwest_mean_Female.xlsx
+│              Southwest_mean_Male.xlsx
+│              Southwest_Population_num_Female.xlsx
+│              Southwest_Population_num_Male.xlsx
+│
+└─Validation
+    ├─Codes
+    │      1_Central_withHuixian_Validation_CVDriskfactors.R
+    │      1_Central_withLiuyang_Validation_CVDriskfactors.R
+    │      1_East_withLicang_Validation_CVDriskfactors.R
+    │      1_East_withTongxiang_Validation_CVDriskfactors.R
+    │      1_East_withWuzhong_Validation_CVDriskfactors.R
+    │      1_Northeast_withNangang_Validation_CVDriskfactors.R
+    │      1_Northwest_withMaiji_Validation_CVDriskfactors.R
+    │      1_Southwest_withPengzhou_Validation_CVDriskfactors.R
+    │      1_South_withLiubei_Validation_CVDriskfactors.R
+    │      1_South_withMeilan_Validation_CVDriskfactors.R
+    │      2_Central_Validation_CVDriskfactor_InputForFigures_Huixian.R
+    │      2_Central_Validation_CVDriskfactor_InputForFigures_Liuyang.R
+    │      2_East_Validation_CVDriskfactor_InputForFigures_Licang.R
+    │      2_East_Validation_CVDriskfactor_InputForFigures_Tongxiang.R
+    │      2_East_Validation_CVDriskfactor_InputForFigures_Wuzhong.R
+    │      2_Northeast_Validation_CVDriskfactor_InputForFigures_Nangang.R
+    │      2_Northwest_Validation_CVDriskfactor_InputForFigures_Maiji.R
+    │      2_Southwest_Validation_CVDriskfactor_InputForFigures_Pengzhou.R
+    │      2_South_Validation_CVDriskfactor_InputForFigures_Liubei.R
+    │      2_South_Validation_CVDriskfactor_InputForFigures_Meilan.R
+    │      3_Figures_demographics.R
+    │      4_Figures_ethnicity.R
+    │      5_Figures_CVDriskfactors.R
+    │      6_Figures_Correlation.R (Updated)
+    │
+    ├─Figures
+    │      Age_by_Region.png
+    │      BMI_with_CKB.png
+    │      Education_by_Region.png
+    │      Ethnicity_by_Region.png
+    │      Figure_Correlation_Panel_ABC.png (Updated)
+    │      History_of_Diabetes_with_CKB.png
+    │      Prevalence_of_Current_Smoking_with_CKB.png
+    │      SBP_with_CKB.png
+    │      Settlement_type_by_Region.png
+    │      Ten-year_CHD_risk_with_CKB.png
+    │      Ten-year_Stroke_risk_with_CKB.png
+    │
+    ├─Parameters
+    │  │  Age_byRegion_Settlement_Sex.xlsx
+    │  │  All_Ethnicity_Combined.xlsx
+    │  │  All_Regions_Combined.xlsx
+    │  │  Central_CVDriskFactor_ComparedWithHuixian.xlsx
+    │  │  Central_CVDriskFactor_ComparedWithLiuyang.xlsx
+    │  │  East_CVDriskFactor_ComparedWithLicang.xlsx
+    │  │  East_CVDriskFactor_ComparedWithTongxiang.xlsx
+    │  │  East_CVDriskFactor_ComparedWithWuzhong.xlsx
+    │  │  Education_byRegion_Settlement_Sex.xlsx
+    │  │  Ethnicity_byRegion_Settlement_Sex.xlsx
+    │  │  Northeast_CVDriskFactor_ComparedWithNangang.xlsx
+    │  │  Northwest_CVDriskFactor_ComparedWithMaiji.xlsx
+    │  │  Southwest_CVDriskFactor_ComparedWithPengzhou.xlsx
+    │  │  South_CVDriskFactor_ComparedWithLiubei.xlsx
+    │  │  South_CVDriskFactor_ComparedWithMeilan.xlsx
+    │  │
+    │  └─Corr (Updated)
+    │      ├─CHARLS
+    │      │      corr_sex1_age_45_59.csv
+    │      │      corr_sex1_age_60_84.csv
+    │      │      corr_sex2_age_45_59.csv
+    │      │      corr_sex2_age_60_84.csv
+    │      │
+    │      ├─CHERRY
+    │      │      corr_sex1_age_35_59.csv
+    │      │      corr_sex1_age_60_84.csv
+    │      │      corr_sex2_age_35_59.csv
+    │      │      corr_sex2_age_60_84.csv
+    │      │
+    │      ├─CHNS
+    │      │      corr_sex1_age_35_59.csv
+    │      │      corr_sex1_age_60_84.csv
+    │      │      corr_sex2_age_35_59.csv
+    │      │      corr_sex2_age_60_84.csv
+    │      │
+    │      ├─East_SUPPORT
+    │      │      corr_sex1_age_35_59.csv
+    │      │      corr_sex1_age_60_84.csv
+    │      │      corr_sex2_age_35_59.csv
+    │      │      corr_sex2_age_60_84.csv
+    │      │
+    │      ├─SUPPORT_35
+    │      │      corr_sex1_age_35_59.csv
+    │      │      corr_sex1_age_60_84.csv
+    │      │      corr_sex2_age_35_59.csv
+    │      │      corr_sex2_age_60_84.csv
+    │      │
+    │      └─SUPPORT_45
+    │              corr_sex1_age_45_59.csv
+    │              corr_sex1_age_60_84.csv
+    │              corr_sex2_age_45_59.csv
+    │              corr_sex2_age_60_84.csv
+    │
+    └─Tables
+            Central_CVDriskFactor_ComparedWithHuixian_category.xlsx
+            Central_CVDriskFactor_ComparedWithLiuyang_category.xlsx
+            East_CVDriskFactor_ComparedWithLicang_category.xlsx
+            East_CVDriskFactor_ComparedWithTongxiang_category.xlsx
+            East_CVDriskFactor_ComparedWithWuzhong_category.xlsx
+            Northeast_CVDriskFactor_ComparedWithNangang_category.xlsx
+            Northwest_CVDriskFactor_ComparedWithMaiji_category.xlsx
+            Southwest_CVDriskFactor_ComparedWithPengzhou_category.xlsx
+            South_CVDriskFactor_ComparedWithLiubei_category.xlsx
+            South_CVDriskFactor_ComparedWithMeilan_category.xlsx
+```
+
 ## Version History
 
 - **v1.0**: Initial release with parameters and codes of the SUPPORT dataset across seven geographic regions of mainland China
-
+- **v1.1**: Added two variables of medication history of the use of lipid-lowering and antihypertensive drugs. Added correlation heatmap comparisons between SUPPORT and external datasets, including CHERRY (the CHinese Electronic health Records Research in Yinzhou), CHARLS (the China Health and Retirement Longitudinal Study), and CHNS (the China Health and Nutrition Survey). 
